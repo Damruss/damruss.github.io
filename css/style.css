@@ -896,6 +896,9 @@ Modal Window
   }
 }
 @media (min-width: 1199px) and (max-width: 1600px) {
+  .header {
+    background: none;
+  }
   .main_nav_bar span {
     background-color: #ffffff;
     box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.75);
