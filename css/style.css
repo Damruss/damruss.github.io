@@ -1005,7 +1005,8 @@ Modal Window
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: #000;
+  background: url(../lib/video-bg/Snapshots/Spacious.jpg) no-repeat center center;
+  background-size: cover;
 }
 .video-container .poster img {
   width: 100%;

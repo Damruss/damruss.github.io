@@ -31,6 +31,7 @@
         <video autoplay loop class="fillWidth">
             <source src="lib/video-bg/MP4/Spacious.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
             <source src="lib/video-bg/WEBM/Spacious.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            sdsdvsvS
         </video>
         <div class="poster hidden">
             <img src="lib/video-bg/Snapshots/Spacious.jpg" alt="">
@@ -64,9 +65,12 @@
               <input type="text" class="rfield" id="userName" name="username" placeholder="Your Name">
               <input type="email" class="rfield" id="email" name="email" placeholder="Your Email">
               <textarea placeholder="Your Message" name="user_message" rows="3"></textarea>
-              <button type="submit" id="submit_form" class="main_form_btn disabled">Send Message &rarr;
-              </button>
+              <!-- <button type="submit" id="submit_form" class="main_form_btn disabled">Send Message &rarr;
+              </button> -->
             </form>
+            <button data-toggle="modal" data-target="#modal_thanks" class="main_form_btn">
+             Send Message &rarr;
+            </button>
           </div>
         </div>
       </div>
@@ -578,25 +582,25 @@
         });
       </script>
                 <script>
-      $(document).ready(function() {
-      $("#main_form_ajax").submit(function() {
-        // if ($('input#userName').val() !== '') {
-        $.ajax({
-          type: "POST",
-          url: "mail.php",
-          data: $(this).serialize()
-        }).done(function() {
-          $(this).find("input").val("");
-          $('#modal_thanks').modal('show');
-          $("#form").trigger("reset");
-          }); // done function
-        return false;
-        // }; //   if
-        // else {
-        //   alert ('123');
-        // }
-      }); // submit function
-      }); // document ready
+      // $(document).ready(function() {
+      // $("#main_form_ajax").submit(function() {
+      //   // if ($('input#userName').val() !== '') {
+      //   $.ajax({
+      //     type: "POST",
+      //     url: "mail.php",
+      //     data: $(this).serialize()
+      //   }).done(function() {
+      //     $(this).find("input").val("");
+      //     $('#modal_thanks').modal('show');
+      //     $("#form").trigger("reset");
+      //     }); // done function
+      //   return false;
+      //   // }; //   if
+      //   // else {
+      //   //   alert ('123');
+      //   // }
+      // }); // submit function
+      // }); // document ready
 
     </script>
     <script>
