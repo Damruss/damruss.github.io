@@ -485,7 +485,6 @@ Modal Window
   }
 }
 @media (min-width: 0px) and (max-width: 481px) {
-  data-wow-iteration: 5;
   .process_box {
     min-height: 210px;
     margin-top: 50px;
