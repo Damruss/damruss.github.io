@@ -14,8 +14,13 @@
 // Base settings
 
 body {
-		background-color: @base_bg;
+	background-color: @base_bg;
 }  
+html, body {
+	 width: 100%;
+	 height: 100%;
+	 display: table;
+}
 #head {
 	height: 56px;
 }
@@ -249,7 +254,7 @@ body {
 @media (min-width: 0px) and (max-width: 481px) {
 	
 }
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 750px) and (max-width: 991px) {
 	#firstscreen {
 		margin: 0px;
 	}
@@ -258,16 +263,18 @@ body {
 		h1 {
 			.opn-reg;
 			color: white;
-			font-size: 48px;
+			font-size: 52px;
 			text-align: center;
 			position: relative;
-			left: -275px;
+			left: -330px;
 			margin-left: 50%;
-			width: 570px;
+			width: 660px;
 		}
 		&_col1 {
 			position: relative;
 			top: -40px;
+			height: 2100px;
+			padding: 3%;
 			span {
 				font-family: 'Open Sans', sans-serif;
 				font-weight: 800;
@@ -276,8 +283,8 @@ body {
 			}
 			a {
 				display: inline-block;
-				width: 330px;
-				height: 47px;
+				width: 579px;
+				height: 79px;
 				text-align: center;
 				-webkit-border-radius: 10px;
 				-moz-border-radius: 10px;
@@ -287,12 +294,12 @@ body {
 				background-color: #1b232f;
 				padding-top: 1.5%;
 				text-decoration: underline;
-				font-size: 18px;
+				font-size: 32px;
 			}
 			&_part1 {
 				p {
 					margin: 14px 0px 14px 9px;
-					font-size: 18px;
+					font-size: 32px;
 					color: white;
 				}
 			}
@@ -301,12 +308,13 @@ body {
 				top: -360px;
 				&_header {
 					.opn-reg;
-					font-size: 23px;
+					font-size: 32px;
 					top: 399px;
-					width: 400px;
+					width: 550px;
 					color: white;
 				}
 				&_text {
+					display: none;
 					.opn-reg;
 					font-size: 16px;
 					top: 440px;
@@ -317,8 +325,8 @@ body {
 			}
 			&_img {
 				&_icon {
-					height: 17px;
-					width: 17px;
+					height: 32px;
+					width: 32px;
 					margin-left: 5px;
 				}
 			}
@@ -337,8 +345,8 @@ body {
 				top: 50px;
 			}
 			&_btn1 {
-				height: 47px;
-				width: 158px;
+				height: 81px;
+				width: 279px;
 				-webkit-border-radius: 40px;
 				-moz-border-radius: 40px;
 				-ms-border-radius: 40px;
@@ -346,7 +354,7 @@ body {
 				border-radius: 40px;
 				background: linear-gradient(to right, #1be9fd 0%, #3bffb7 100%);
 				border: 0px;
-				font-size: 16px;
+				font-size: 28px;
 				&_title {
 					color: black;
 					.opn-bold
@@ -354,11 +362,12 @@ body {
 			}
 			&_text_ili {
 				display: inline;
-				font-size: 18px;
+				font-size: 32px;
+				color: white;
 			}
 			&_btn2 {
-				height: 47px;
-				width: 195px;
+				height: 81px;
+				width: 335px;
 				-webkit-border-radius: 40px;
 				-moz-border-radius: 40px;
 				-ms-border-radius: 40px;
@@ -366,40 +375,48 @@ body {
 				border-radius: 40px;
 				background: linear-gradient(to right, #1be9fd 0%, #3bffb7 100%);
 				border: 0px;
-				font-size: 16px;
+				font-size: 28px;
 				&_title {
 					color: black;
 					.opn-bold
 				}
 			}
 			&_lines {
-				height: 511px;
-				width: 240px;
-				margin: 20px 0px 0px 80px;
+				height: 556px;
+				width: 400px;
+				margin-left: 50%;
+				left: -200px;
 				display: block;
+				position: relative;
 				&_point {
-					margin: 500px 0px 0px -179px;
+					position: relative;
+					left: -82px;
+					margin: 0 0 0 50%;
 				}
 			}
 			&_team {
 				position: relative;
-				height: 187px;
-				width: 354px;
-				left: 0px;
-				top: 35px;
+				height: 325px;
+				width: 629px;
+				top: 24px;
 			}
 		}	// col1
 		&_col2 {
+			padding: 3%;
 			span {
 				position: relative;
 				top: 106px;
 				font-family: 'Open Sans', sans-serif;
 				font-weight: 800;
 				color: #333a49;
-				font-size: 114px;
+				font-size: 140px;
+				display: block;
 			}
 			&_part1 {
+				height: 1100px;
+				margin-top: -180px;
 				&_bg {
+					display: none;
 					position: relative;
 					width: 514px;
 					height: 459px;
@@ -407,7 +424,8 @@ body {
 				}
 				&_header {
 					.opn-reg;
-					font-size: 23px;
+					font-size: 32px;
+					margin: 15px 0px;
 					top: 87px;
 					width: 564px;
 					color: white;
@@ -416,17 +434,18 @@ body {
 				}
 				&_text {
 					.opn-reg;
-					font-size: 16px;
+					font-size: 28px;
 					top: 70px;
-					width: 508px;
+					margin: 15px 0px;
+					width: 738px;
 					text-align: left;
 					color: @base_dtext;
 					display: inline-block;
 					position: relative;
 				}
 				&_team {
-					height: 262px;
-					width: 355px;
+					height: 468px;
+					width: 628px;
 					top: 104px;
 					position: relative;
 					display: block;
@@ -434,10 +453,59 @@ body {
 			} 		// part1
 		}		// col2
 	}		// firstscreen
+	.part4-5 {
+		margin: 0px 15px;
+		&_part4 {
+		margin-top: -20px;
+		padding: 0px;
+		height: 800px;
+			span {
+				position: relative;
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 800;
+				color: #333a49;
+				font-size: 140px;
+				display: block;
+			}
+			&_header {
+				font-size: 30px;
+				color: white;
+				width: 550px;
+				margin: 0px;
+			}
+			&_code {
+				height: 382px;
+				width: 636px;
+				top: 50px;
+				position: relative;
+				display: block;
+			}
+		} // part 4
+		&_part5 {
+		padding: 0px;
+		height: 800px;
+			&_text {
+				.opn-reg;
+				font-size: 28px;
+				top: 70px;
+				margin: 15px 0px;
+				width: 738px;
+				text-align: left;
+				color: @base_dtext;
+				display: inline-block;
+				position: relative;
+			}
+			&_activation {
+				height: 676px;
+				width: 655px;
+				top: 50px;
+				position: relative;
+				display: block;
+			}
+		}
+	} // part 4-5
 }
-@media (min-width: 768px) and (max-width: 991px) {
-	
-}
+
 @media (min-width: 991px) and (max-width: 1199px) {
 	.firstscreen_col1_bgmobile {
 		display: none;

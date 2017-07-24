@@ -7,6 +7,12 @@
 body {
   background-color: #272d3b;
 }
+html,
+body {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
 #head {
   height: 56px;
 }
@@ -219,7 +225,7 @@ body {
   top: 30px;
   position: relative;
 }
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 750px) and (max-width: 991px) {
   #firstscreen {
     margin: 0px;
   }
@@ -229,16 +235,18 @@ body {
   .firstscreen h1 {
     font-family: 'OpenSansRegular', sans-serif;
     color: white;
-    font-size: 48px;
+    font-size: 52px;
     text-align: center;
     position: relative;
-    left: -275px;
+    left: -330px;
     margin-left: 50%;
-    width: 570px;
+    width: 660px;
   }
   .firstscreen_col1 {
     position: relative;
     top: -40px;
+    height: 2100px;
+    padding: 3%;
   }
   .firstscreen_col1 span {
     font-family: 'Open Sans', sans-serif;
@@ -248,8 +256,8 @@ body {
   }
   .firstscreen_col1 a {
     display: inline-block;
-    width: 330px;
-    height: 47px;
+    width: 579px;
+    height: 79px;
     text-align: center;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -259,11 +267,11 @@ body {
     background-color: #1b232f;
     padding-top: 1.5%;
     text-decoration: underline;
-    font-size: 18px;
+    font-size: 32px;
   }
   .firstscreen_col1_part1 p {
     margin: 14px 0px 14px 9px;
-    font-size: 18px;
+    font-size: 32px;
     color: white;
   }
   .firstscreen_col1_part2 {
@@ -272,12 +280,13 @@ body {
   }
   .firstscreen_col1_part2_header {
     font-family: 'OpenSansRegular', sans-serif;
-    font-size: 23px;
+    font-size: 32px;
     top: 399px;
-    width: 400px;
+    width: 550px;
     color: white;
   }
   .firstscreen_col1_part2_text {
+    display: none;
     font-family: 'OpenSansRegular', sans-serif;
     font-size: 16px;
     top: 440px;
@@ -286,8 +295,8 @@ body {
     color: #acb8ce;
   }
   .firstscreen_col1_img_icon {
-    height: 17px;
-    width: 17px;
+    height: 32px;
+    width: 32px;
     margin-left: 5px;
   }
   .firstscreen_col1_span_2 {
@@ -303,8 +312,8 @@ body {
     top: 50px;
   }
   .firstscreen_col1_btn1 {
-    height: 47px;
-    width: 158px;
+    height: 81px;
+    width: 279px;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     -ms-border-radius: 40px;
@@ -312,7 +321,7 @@ body {
     border-radius: 40px;
     background: linear-gradient(to right, #1be9fd 0%, #3bffb7 100%);
     border: 0px;
-    font-size: 16px;
+    font-size: 28px;
   }
   .firstscreen_col1_btn1_title {
     color: black;
@@ -320,11 +329,12 @@ body {
   }
   .firstscreen_col1_text_ili {
     display: inline;
-    font-size: 18px;
+    font-size: 32px;
+    color: white;
   }
   .firstscreen_col1_btn2 {
-    height: 47px;
-    width: 195px;
+    height: 81px;
+    width: 335px;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     -ms-border-radius: 40px;
@@ -332,27 +342,33 @@ body {
     border-radius: 40px;
     background: linear-gradient(to right, #1be9fd 0%, #3bffb7 100%);
     border: 0px;
-    font-size: 16px;
+    font-size: 28px;
   }
   .firstscreen_col1_btn2_title {
     color: black;
     font-family: 'OpenSansBold', sans-serif;
   }
   .firstscreen_col1_lines {
-    height: 511px;
-    width: 240px;
-    margin: 20px 0px 0px 80px;
+    height: 556px;
+    width: 400px;
+    margin-left: 50%;
+    left: -200px;
     display: block;
+    position: relative;
   }
   .firstscreen_col1_lines_point {
-    margin: 500px 0px 0px -179px;
+    position: relative;
+    left: -82px;
+    margin: 0 0 0 50%;
   }
   .firstscreen_col1_team {
     position: relative;
-    height: 187px;
-    width: 354px;
-    left: 0px;
-    top: 35px;
+    height: 325px;
+    width: 629px;
+    top: 24px;
+  }
+  .firstscreen_col2 {
+    padding: 3%;
   }
   .firstscreen_col2 span {
     position: relative;
@@ -360,9 +376,15 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     color: #333a49;
-    font-size: 114px;
+    font-size: 140px;
+    display: block;
+  }
+  .firstscreen_col2_part1 {
+    height: 1100px;
+    margin-top: -180px;
   }
   .firstscreen_col2_part1_bg {
+    display: none;
     position: relative;
     width: 514px;
     height: 459px;
@@ -370,7 +392,8 @@ body {
   }
   .firstscreen_col2_part1_header {
     font-family: 'OpenSansRegular', sans-serif;
-    font-size: 23px;
+    font-size: 32px;
+    margin: 15px 0px;
     top: 87px;
     width: 564px;
     color: white;
@@ -379,18 +402,70 @@ body {
   }
   .firstscreen_col2_part1_text {
     font-family: 'OpenSansRegular', sans-serif;
-    font-size: 16px;
+    font-size: 28px;
     top: 70px;
-    width: 508px;
+    margin: 15px 0px;
+    width: 738px;
     text-align: left;
     color: #acb8ce;
     display: inline-block;
     position: relative;
   }
   .firstscreen_col2_part1_team {
-    height: 262px;
-    width: 355px;
+    height: 468px;
+    width: 628px;
     top: 104px;
+    position: relative;
+    display: block;
+  }
+  .part4-5 {
+    margin: 0px 15px;
+  }
+  .part4-5_part4 {
+    margin-top: -20px;
+    padding: 0px;
+    height: 800px;
+  }
+  .part4-5_part4 span {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    color: #333a49;
+    font-size: 140px;
+    display: block;
+  }
+  .part4-5_part4_header {
+    font-size: 30px;
+    color: white;
+    width: 550px;
+    margin: 0px;
+  }
+  .part4-5_part4_code {
+    height: 382px;
+    width: 636px;
+    top: 50px;
+    position: relative;
+    display: block;
+  }
+  .part4-5_part5 {
+    padding: 0px;
+    height: 800px;
+  }
+  .part4-5_part5_text {
+    font-family: 'OpenSansRegular', sans-serif;
+    font-size: 28px;
+    top: 70px;
+    margin: 15px 0px;
+    width: 738px;
+    text-align: left;
+    color: #acb8ce;
+    display: inline-block;
+    position: relative;
+  }
+  .part4-5_part5_activation {
+    height: 676px;
+    width: 655px;
+    top: 50px;
     position: relative;
     display: block;
   }
