@@ -184,16 +184,16 @@ body {
   display: block;
 }
 .part4-5 {
-  margin: 5% 5%;
+  height: 630px;
 }
-.part4 span {
+.part4-5_part4 span {
   top: 10%;
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   color: #333a49;
   font-size: 114px;
 }
-.part4_header {
+.part4-5_part4_header {
   top: 32%;
   font-family: 'OpenSansRegular', sans-serif;
   font-size: 23px;
@@ -202,32 +202,189 @@ body {
   position: relative;
   top: -30px;
 }
-.part4_code {
+.part4-5_part4_code {
   height: 214px;
   width: 355px;
   top: 60%;
   left: 0px;
 }
-.part5 {
+.part4-5_part5 {
   position: relative;
   top: 98px;
 }
-.part5_text {
+.part4-5_part5_text {
   font-family: 'OpenSansRegular', sans-serif;
   font-size: 16px;
   width: 400px;
   text-align: left;
   color: #acb8ce;
 }
-.part5_activation {
+.part4-5_part5_activation {
   height: 443px;
   width: 454px;
   top: 30px;
   position: relative;
 }
+.stage5-container {
+  height: 1100px;
+}
+.stage5 {
+  text-align: center;
+  top: 70px;
+}
+.stage5 span {
+  top: 10%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  color: #333a49;
+  font-size: 114px;
+}
+.stage5_header {
+  top: 32%;
+  font-family: 'OpenSansRegular', sans-serif;
+  font-size: 23px;
+  width: 750px;
+  color: white;
+  position: relative;
+  top: -10px;
+  margin: 23px auto;
+}
+.stage5_text {
+  font-family: 'OpenSansRegular', sans-serif;
+  font-size: 16px;
+  width: 650px;
+  color: #acb8ce;
+  margin: 0px auto;
+  top: -10px;
+  position: relative;
+}
+.stage5_blank-team {
+  width: 100%;
+  position: relative;
+  top: -10px;
+}
+.blank5 {
+  top: 100px;
+  position: relative;
+}
+.blank5_main-image {
+  width: 80%;
+  margin-left: 110px;
+}
+.blank5_col2 {
+  padding: 3% 0 0 4%;
+}
+.blank5_col2_images {
+  width: 50%;
+  display: inline-block;
+}
+.blank5_col2_text {
+  font-family: 'OpenSansRegular', sans-serif;
+  font-size: 16px;
+  width: 350px;
+  color: #acb8ce;
+  margin: 0px auto;
+  top: 20px;
+  position: relative;
+  display: inline-block;
+}
+.stage6 {
+  margin-top: 100px;
+}
+.stage6_header {
+  top: 32%;
+  font-family: 'OpenSansRegular', sans-serif;
+  font-size: 32px;
+  width: 600px;
+  color: white;
+  position: relative;
+  margin: 23px 0;
+}
+.stage6_text_1 {
+  font-family: 'OpenSansRegular', sans-serif;
+  font-size: 24px;
+  width: 100%;
+  color: white;
+  margin: 0px auto;
+  top: -10px;
+  position: relative;
+}
+.stage6_text_2 {
+  font-family: 'OpenSansRegular', sans-serif;
+  font-size: 24px;
+  width: 100%;
+  color: white;
+  margin: 0px auto;
+  top: -10px;
+  position: relative;
+}
+.stage6_text_mobile {
+  display: none;
+}
+.stage6_photo {
+  width: 10%;
+  margin-right: 3px;
+  display: none;
+}
+.stage6_company {
+  width: 100%;
+  position: relative;
+  top: 189px;
+}
+.stage6_span_main {
+  top: 10%;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  color: #333a49;
+  font-size: 114px;
+}
+.stage6_span_save {
+  width: 62px;
+  height: 40px;
+  background-color: #145fbf;
+  display: inline-block;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+.stage6_span_change {
+  width: 182px;
+  height: 40px;
+  background-color: #131313;
+  display: inline-block;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+.stage6_span_edit {
+  width: 152px;
+  height: 40px;
+  background-color: #131313;
+  display: inline-block;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
 @media (min-width: 750px) and (max-width: 991px) {
   #firstscreen {
     margin: 0px;
+  }
+  .stage5-container {
+    height: 1350px;
+  }
+  .stage6-row {
+    margin: 0;
+    position: relative;
+    top: -20px;
   }
   .firstscreen {
     padding-bottom: 0%;
@@ -432,18 +589,17 @@ body {
     font-weight: 800;
     color: #333a49;
     font-size: 140px;
-    display: block;
   }
   .part4-5_part4_header {
     font-size: 30px;
     color: white;
     width: 550px;
-    margin: 0px;
+    margin: 4% 0 0 0;
   }
   .part4-5_part4_code {
     height: 382px;
     width: 636px;
-    top: 50px;
+    top: 40px;
     position: relative;
     display: block;
   }
@@ -454,7 +610,7 @@ body {
   .part4-5_part5_text {
     font-family: 'OpenSansRegular', sans-serif;
     font-size: 28px;
-    top: 70px;
+    top: -20px;
     margin: 15px 0px;
     width: 738px;
     text-align: left;
@@ -465,9 +621,168 @@ body {
   .part4-5_part5_activation {
     height: 676px;
     width: 655px;
-    top: 50px;
+    top: 45px;
     position: relative;
     display: block;
+  }
+  .stage5 {
+    text-align: center;
+    top: 140px;
+  }
+  .stage5 span {
+    top: 10%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    color: #333a49;
+    font-size: 140px;
+  }
+  .stage5_header {
+    top: 32%;
+    font-family: 'OpenSansRegular', sans-serif;
+    font-size: 32px;
+    width: 460px;
+    color: white;
+    position: relative;
+    top: -10px;
+    margin: 23px auto;
+  }
+  .stage5_text {
+    font-family: 'OpenSansRegular', sans-serif;
+    font-size: 28px;
+    width: 620px;
+    color: #acb8ce;
+    margin: 0px auto;
+    top: -10px;
+    position: relative;
+  }
+  .stage5_blank-team {
+    width: 100%;
+    position: relative;
+    top: -10px;
+  }
+  .blank5 {
+    top: 100px;
+    position: relative;
+  }
+  .blank5_main-image {
+    width: 40%;
+    margin: 6% auto;
+    display: block;
+  }
+  .blank5_col2 {
+    padding: 0;
+  }
+  .blank5_col2_images {
+    width: 39%;
+    display: block;
+    margin: 0 auto;
+  }
+  .blank5_col2_text {
+    font-family: 'OpenSansRegular', sans-serif;
+    text-align: center;
+    font-size: 28px;
+    width: 560px;
+    color: #acb8ce;
+    margin: 0px auto;
+    top: 30px;
+    position: relative;
+    display: block;
+  }
+  .stage6_header {
+    font-family: 'OpenSansRegular', sans-serif;
+    font-size: 32px;
+    width: 600px;
+    color: white;
+    position: relative;
+    margin: 23px 0;
+  }
+  .stage6_text_1 {
+    font-family: 'OpenSansRegular', sans-serif;
+    font-size: 24px;
+    width: 100%;
+    color: white;
+    margin: 0px auto;
+    top: -10px;
+    position: relative;
+  }
+  .stage6_text_2 {
+    display: none;
+  }
+  .stage6_text_mobile {
+    font-family: 'OpenSansRegular', sans-serif;
+    font-size: 24px;
+    width: 100%;
+    color: white;
+    margin: 0px auto;
+    top: -10px;
+    position: relative;
+    display: inline;
+  }
+  .stage6_photo {
+    width: 10%;
+    margin-right: 3px;
+    display: inline-block;
+  }
+  .stage6_company {
+    width: 100%;
+    position: relative;
+    top: 189px;
+  }
+  .stage6_span_main {
+    top: 10%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    color: #333a49;
+    font-size: 114px;
+  }
+  .stage6_span_save {
+    width: 62px;
+    height: 40px;
+    background-color: #145fbf;
+    display: inline-block;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+  }
+  .stage6_span_change {
+    width: 182px;
+    height: 40px;
+    background-color: #131313;
+    display: inline-block;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+  }
+  .stage6_span_edit {
+    width: 152px;
+    height: 40px;
+    background-color: #131313;
+    display: inline-block;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+  }
+  .stage6_span_upload {
+    width: 462px;
+    height: 40px;
+    color: #1793da;
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
   }
 }
 @media (min-width: 991px) and (max-width: 1199px) {
