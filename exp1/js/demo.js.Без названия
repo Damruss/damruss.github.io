@@ -18,7 +18,7 @@ var showFullSite = function(){
 
 var showMobileOptimized = function(){
     localStorage.isResponsive = 'true';
-    viewport.attr('content', 'width=' + 770); // deviceWidth
+    viewport.attr('content', 'width=' + deviceWidth); 
 }
 
 // if the user previously chose to view full site, change the viewport
