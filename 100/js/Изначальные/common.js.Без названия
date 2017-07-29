@@ -1,0 +1,181 @@
+$(function() {
+
+
+	function getOS() {
+		var userAgent = window.navigator.userAgent,
+      platform = window.navigator.platform,
+      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+      iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+      os = null;
+
+  if (macosPlatforms.indexOf(platform) !== -1) {
+    os = 'apple';
+  } else if (iosPlatforms.indexOf(platform) !== -1) {
+    os = 'apple';
+  } else if (windowsPlatforms.indexOf(platform) !== -1) {
+    os = 'android';
+  } else if (/Android/.test(userAgent)) {
+    os = 'android';
+  } else if (!os && /Linux/.test(platform)) {
+    os = 'android';
+  }
+
+  return os;
+}
+
+//	alert(getOS());
+if(getOS()=="apple"){
+	$(".downloadLink").each(function(){
+			if($(this).attr("href")=="https://play.google.com/store/apps/details?id=com.the100am.app"){
+				$(this).attr("href","https://itunes.apple.com/ru/app/100am/id1202162533?l=en&mt=8");
+			}
+	});
+}
+///// НЕ ТРОГАЙ ЭТОЦ СКРИПТ!!!!
+
+
+	function getDesktop() {
+		var userAgent = window.navigator.userAgent,
+      platform = window.navigator.platform,
+      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+      iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+      os = null;
+
+  if (macosPlatforms.indexOf(platform) !== -1) {
+    os = 'desktop';
+  } else if (iosPlatforms.indexOf(platform) !== -1) {
+    os = 'ios';
+  } else if (windowsPlatforms.indexOf(platform) !== -1) {
+    os = 'desktop';
+  } else if (/Android/.test(userAgent)) {
+    os = 'android';
+  } else if (!os && /Linux/.test(platform)) {
+    os = 'desktop';
+  }
+
+  return os;
+}
+
+
+
+if(getDesktop()=="ios"){
+	$("a").each(function(){
+			if($(this).attr("href")=="http://web.100am.co/sign-up"){
+				$(this).attr("href","https://itunes.apple.com/ru/app/100am/id1202162533?l=en&mt=8");
+			}
+	});
+}
+if(getDesktop()=="android"){
+	$("a").each(function(){
+			if($(this).attr("href")=="http://web.100am.co/sign-up"){
+				$(this).attr("href","https://play.google.com/store/apps/details?id=com.the100am.app");
+			}
+	});
+}
+
+
+
+	//Animated css
+
+	$(".content_text_acceptance_of_terms h3,.content_text_acceptance_of_terms p,.content_text_about p,.content_text_about span,.the_exchange_of_contacts h2,.the_exchange_of_contacts p,.the_contacts_close_at_hand h2,.the_contacts_close_at_hand p,.resources_top span,.resources_h2 h2,.resources_h2 p,.new_business_opportunities span,.new_business_opportunities h2,.cost_optimization h2,.cost_optimization p,.secure_data_storage h2,.secure_data_storage p").animated("fadeInUp", "fadeOutDown");
+	$(".footer_content_block1_last img,.adv_solutions_for_comp_text1 img,.adv_solutions_for_comp_text2 img,.new_business_opportunities_box1 img,.new_business_opportunities_box2 img").animated("bounceIn", "bounceOut");
+	$(".updateble_contacts_box").animated("flipInX", "flipOutX");
+	$(".most_content_main .selfexpression_img_cards img").animated("zoomIn", "zoomOut");
+	$(".most_content_main .digital_format img,.adv_solutions_for_comp_img img").animated("fadeInLeft", "fadeOutLeft");
+	
+
+	//SVG Fallback
+	if(!Modernizr.svg) {
+		$("img[src*='svg']").attr("src", function() {
+			return $(this).attr("src").replace(".svg", ".png");
+		});
+	};
+
+	
+	//Chrome Smooth Scroll
+	try {
+		$.browserSelector();
+		if($("html").hasClass("chrome")) {
+			$.smoothScroll();
+		}
+	} catch(err) {
+
+	};
+
+	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+
+	$("input[name='email']").keyup(function (e){
+		this.value = this.value.replace (/[^A-z-0-9-@-\s+.]/, '');
+	});
+
+	var hide_show = 0;
+	$(".live_cards_gallery span").click(function() {
+		
+		$(".live_cards_gallery_cont1_slide").slideToggle();
+		hide_show ++;
+
+		if (hide_show == 1) {
+			$(".live_cards_gallery span").text("Hide all")
+		};
+
+		if (hide_show == 2) {
+			$(".live_cards_gallery span").text("Show all")
+		};
+
+		if (hide_show == 2) {
+
+			hide_show = 0
+		};
+
+	});
+
+	// Находим самый длинный .pricing_pack_box и присваиваем его длину остальным .pricing_pack_box
+		// Если текс будет убавляться или прибавляться, они будут одинаковыми в любом случае.  
+		function pricing_pack_box() {
+
+			$(".pricing_pack_box").css({
+				"height" : "auto"
+			});
+
+			var mh = 0;
+			$(".pricing_pack_box").each(function () {
+				var h_block = parseInt($(this).height());
+				if(h_block > mh) {
+					mh = h_block;
+				};
+			});
+
+			$(".pricing_pack_box").height(mh);
+		};
+
+		pricing_pack_box();
+
+		// На рисайзе тоже, на будущее, когда будет адаптация.  
+		$(window).resize(function() {
+			pricing_pack_box();
+		});
+
+
+	//E-mail Ajax Send
+	//Documentation & Example: https://github.com/agragregra/uniMail
+	$("#for_designers").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "../mail.php", //Change
+			data: th.serialize()
+		}).done(function(msg) {
+		//	 alert( "Data Saved: " + msg );
+			setTimeout(function() {
+				alert("Спасибо! Заявка отправлена. Мы скоро с вами свяжемся.");
+				$("form").trigger("reset");
+			}, 300);
+		});
+		return false;
+	});
+	
+});
+
+

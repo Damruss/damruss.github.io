@@ -1,0 +1,116 @@
+/*==========  Desktop First Method  ==========*/
+@media only screen and (max-width : 1250px){
+	.most_content_main .selfexpression_img_cards img:first-child{
+		margin-left: 175px;
+	}
+	.most_content_main .selfexpression_img_cards img:nth-child(3){
+		left: -30px;
+	}
+	.most_content_main .selfexpression_img_cards img:nth-child(4){
+		left: 30px;
+	}
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.most_content_main .updateble_contacts p br{
+		display: none;
+	}
+	.most_content_main .updateble_contacts_box{
+		margin-left: 0px;
+	}
+	.most_content_main .updateble_contacts_box:first-child {
+    	margin-top: 106px;
+	}
+	.most_content_main .digital_format img{
+		max-width: 500px;
+	}
+	.most_content_main .selfexpression_img_cards img:first-child{
+		margin-left: 35px;
+	}
+	.most_content_main .selfexpression_img_cards img:nth-child(3){
+		display: none;
+	}
+	.most_content_main .selfexpression_img_cards img:nth-child(4){
+		left: 330px;
+	}
+	.most_content_main .adv_solutions_for_comp_img img,.most_content_business .adv_solutions_for_comp_img img{
+		margin-left: 0;
+	}
+	.most_content_main .adv_solutions_for_comp_text2,.most_content_business .adv_solutions_for_comp_text2{
+		width: 275px;
+	}
+	.live_cards_gallery_cont1 a, .live_cards_gallery_cont2 a{
+		margin-right: 30px;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+	/*Disable Animation on Mobile Devices
+	.animated {
+		
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}*/
+	
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

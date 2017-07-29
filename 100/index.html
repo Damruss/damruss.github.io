@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+
+<html lang="ru" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths webkit chrome win js"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+
+
+
+	<title>Цифровые визитки 100AM</title>
+	<meta name="description" content="Удобный способ хранения, автоматического обновления и обмена контактной информацией с использованием цифровых визиток (Live Bsuiness Cards).
+Визитку можно создать с помощью gif, видео или фото или выбрать уже готовый шаблон визитки.
+Вы можете создать корпоративный эккаунт, чтобы контакты ваших коллег были у вас в телефоне. При обмене визиткой с контрагентами данные могу сохраняться в CRM компании. 
+Также вы можете создать группу по интересам и отправить приглашение вашим друзям и бизнес партнерам. Это позволит иметь группу по интересам с актуальными контактными данными. 
+100AM - AI платформа для управления контактными данными">
+	<meta name="keywords" content="Цифровые визитки, 100AM, 100andMore, обмен контактами, CRM, актуальные контакты, сканирование и распознавание бумажных визиток, мобильное приложение, нетворкинг">
+
+
+
+	<link rel="shortcut icon" href="http://www.100am.co/img/favicon/Favicon@32.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="http://www.100am.co/img/favicon/Favicon@32.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="http://www.100am.co/img/favicon/Favicon@76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="http://www.100am.co/img/favicon/Favicon@120.png">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<!-- <link rel="stylesheet" href="css/bootstrap.min(new).css"> -->
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main(init).css">
+	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="css/skin_bootstrap_grid.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+
+	<script async="" src="js/Изначальные/analytics.js.Без названия"></script><script src="js/Изначальные/modernizr.js.Без названия"></script>
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88674668-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<style type="text/css">/*.lleo_errorSelection *::-moz-selection,
+.lleo_errorSelection *::selection,
+.lleo_errorSelection *::-webkit-selection {
+    background-color: red !important;
+    color: #fff !important;;
+}*/
+
+#lleo_dialog,
+#lleo_dialog * {
+    color: #000 !important;
+    font: normal 13px Arial, Helvetica !important;
+    line-height: 15px !important;
+    margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none 0 !important;
+	position: static !important;
+	vertical-align: baseline !important;
+	overflow: visible !important;
+	width: auto !important;
+	height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+	float: none !important;
+	visibility: visible !important;
+	text-align: left !important;
+    text-transform: none !important;
+	border-collapse: separate !important;
+	border-spacing: 2px !important;
+    box-sizing: content-box !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    filter: none !important;
+}
+#lleo_dialog *:before,
+#lleo_dialog *:after {
+    content: '';
+}
+
+#lleo_dialog iframe {
+	height: 0 !important;
+	width: 0 !important;
+}
+
+#lleo_dialog {
+    position: absolute !important;
+    background: #fff !important;
+    border: solid 1px #ccc !important;
+    padding: 7px 0 0 !important;
+    left: -999px;
+    top: -999px;
+    width: 440px !important;
+    overflow: hidden;
+    display: block !important;
+    z-index: 999999999 !important;
+    box-shadow: 8px 16px 30px rgba(0, 0, 0, 0.16) !important;
+    border-radius: 3px !important;
+    opacity: 0 !important;
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+    transform: translateY(15px);
+}
+#lleo_dialog.lleo_show_small {
+    width: 150px !important;
+}
+#lleo_dialog.lleo_show {
+    opacity: 1 !important;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s !important;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s !important;
+    -ms-transition: -ms-transform 0.3s, opacity 0.3s !important;
+    -o-transition: -o-transform 0.3s, opacity 0.3s !important;
+    transition: transform 0.3s, opacity 0.3s !important;
+}
+#lleo_dialog.lleo_collapse {
+    opacity: 0 !important;
+    -webkit-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -moz-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -ms-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -o-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s !important;
+    -moz-transition: -moz-transform 0.4s, opacity 0.4s !important;
+    -ms-transition: -ms-transform 0.4s, opacity 0.4s !important;
+    -o-transition: -o-transform 0.4s, opacity 0.4s !important;
+    transition: transform 0.4s, opacity 0.4s !important;
+}
+#lleo_dialog input::-webkit-input-placeholder {
+    color: #aaa !important;
+}
+#lleo_dialog .lleo_has_pic #lleo_word {
+	margin-right: 80px !important;
+}
+#lleo_dialog #lleo_translationsContainer1 {
+	position: relative !important;
+}
+#lleo_dialog #lleo_translationsContainer2 {
+	padding: 7px 0 0 !important;
+	vertical-align: middle !important;
+}
+#lleo_dialog #lleo_word {
+    color: #000 !important;
+    margin: 0 5px 2px 0 !important;
+    /*float: left !important;*/
+}
+#lleo_dialog .lleo_has_sound #lleo_word {
+    margin-left: 30px !important;
+}
+#lleo_dialog #lleo_text {
+    font-weight: bold !important;
+    color: #d56e00 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+/*
+#lleo_dialog #lleo_text.lleo_known {
+    cursor: pointer !important;
+    text-decoration: underline !important;
+}
+*/
+/*#lleo_dialog #lleo_closeBtn {
+    position: absolute !important;
+    right: 6px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 0 !important;
+    color: #aaa !important;
+    display: block !important;
+	z-index: 9999999999 !important;
+	width: 7px !important;
+	height: 7px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}*/
+
+#lleo_dialog #lleo_optionsBtn {
+    position: absolute !important; 
+    right: 3px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+    color: #aaa !important;
+    padding: 2px !important;
+	display: none;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_optionsBtn {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_optionsBtn img {
+        width: 12px !important;
+        height: 12px !important;
+    }
+#lleo_dialog #lleo_sound {
+    float: left !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: 9px !important;
+    margin-right: 3px !important;
+    background: 0 0 no-repeat !important;
+    cursor: pointer !important;
+    display: none !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfNJREFUeNq0U01IVFEU/u57Oo5WhBRIBBptykWLYBa2soWiEKQQEbrSFsGbVRQKQc2iFqGitXqvjQxCoCJCqyI0aBUtZILaJNUuYWYWo8HovJ/707nP94bnz0rxwvfOuefd8517fi5TSuE4i50YwZ3l37ZhNlpgzFkaaM/G9sHF1YskNrT+7l4PjMOcb78t2JL71uxgB+2UlfxHTtq5N94fIOh/88kWgWfl73ZCSQkpeGg3H091JY6dI2S00qA/N3KO3dDUYhFgEmZGurG+w9FqApIHsVM7kaTF9Nhn0r8Q7hPWQgIRuNaH3AMUA4W/Lkdh04cpFS43G0TgxQTvCdMETVAk3KynIHwXZU/ge8XDt7KH9bKLjU0P2zVO5LsEpSejVRJ9UR18EtfqKegovs9R3Q6w9c/H1o4Aa2Jwm1lIvn9RJ4w9RdRRzqcYrpwycCll4Cy1lnkS3Bc6vfBg28v8aRIfI78zhB/1GygROH3jLyyzMQ0zlUZuZBSlKkeLoegGtTjYLcJ8pF+NakHOFC2J6w+f25mxSfWrWFF/ShXVPTGvtN14NNkVnxlYWJkgZEL7/vwKr55lKSVnaGYWkuYgrgG172uUv47+U7fw0EHaJXmalUQy/HqO6lBzEsVjJC4Q8kd6TETQpjuaGOvjv8b/AgwA/ij1XMx58NIAAAAASUVORK5CYII=) !important;
+}
+#lleo_dialog .lleo_has_sound #lleo_sound {
+    display: block !important;
+}
+
+#lleo_dialog #lleo_soundWave {
+    border: solid 5px #4495CC !important;
+    border-radius: 5px !important;
+    position: absolute !important;
+    left: -5px !important;
+    top: -5px !important;
+    right: -5px !important;
+    bottom: -5px !important;
+    z-index: 0 !important;
+    opacity: 0.9 !important;
+    display: none !important;
+}
+    #lleo_dialog #lleo_soundWave.lleo_beforePlaying {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_soundWave.lleo_playing {
+        opacity: 0 !important;
+        border-width: 20px !important;
+        border-radius: 30px !important;
+
+        -webkit-transform: scale(1.07,1.1) !important;
+        -moz-transform: scale(1.07,1.1) !important;
+        -ms-transform: scale(1.07,1.1) !important;
+        transform: scale(1.07,1.1) !important;
+
+        -webkit-transition: all 0.6s !important;
+        -moz-transition: all 0.6s !important;
+        -ms-transition: all 0.6s !important;
+        transition: all 0.6s !important;
+    }
+
+
+#lleo_dialog #lleo_picOuter {
+    position: absolute !important;
+    float: right !important;
+    top: 4px;
+    right: 5px;
+    z-index: 9 !important;
+    display: none !important;
+    width: 100px !important;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_picOuter {
+        right: 25px;
+    }
+#lleo_dialog .lleo_has_pic #lleo_picOuter {
+    display: block !important;
+}
+    #lleo_dialog #lleo_picOuter:hover {
+        width: auto !important;
+        z-index: 11 !important;
+    }
+#lleo_dialog #lleo_pic,
+#lleo_dialog #lleo_picBig {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    border: solid 2px #fff !important;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+    z-index: 1 !important;
+}
+#lleo_dialog #lleo_pic {
+	position: relative !important;
+    border: none !important;
+	width: 30px !important;
+}
+#lleo_dialog #lleo_picBig {
+    box-shadow: -1px 2px 4px rgba(0,0,0,0.3);
+    z-index: 2 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+    #lleo_dialog #lleo_picOuter:hover #lleo_picBig {
+        visibility: visible !important;
+        opacity: 1 !important;
+        -webkit-transition: opacity 0.3s !important;
+        -webkit-transition-delay: 0.3s !important;
+    }
+#lleo_dialog #lleo_transcription {
+    margin: 0 80px 4px 31px !important;
+    color: #aaaaaa !important;
+}
+#lleo_dialog .lleo_no_trans {
+    color: #aaa !important;
+}
+
+#lleo_dialog .ll-translation-counter {
+	float: right !important;
+    font-size: 11px !important;
+    color: #aaa !important;
+    padding: 2px 2px 1px 10px !important;
+}
+
+#lleo_dialog .ll-translation-text {
+	float: left !important;
+	/*width: 80% !important;*/
+}
+
+#lleo_dialog #lleo_trans a {
+    color: #3F669F !important;
+    text-decoration: none !important;
+    text-overflow: ellipsis !important;
+    padding: 1px 4px !important;
+    overflow: hidden !important;
+    float: left !important;
+    width: 320px !important;
+}
+
+#lleo_dialog .ll-translation-item {
+    color: #3F669F !important;
+    border: solid 1px #fff !important;
+    padding: 3px !important;
+    width: 100% !important;
+    float: left !important;
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+}
+
+#lleo_dialog .ll-translation-item:hover {
+	border: solid 1px #9FC2C9 !important;
+    background: #EDF4F6 !important;
+	cursor: pointer !important;
+}
+#lleo_dialog .ll-translation-item:hover .ll-translation-counter {
+	color: #83a0a6 !important;
+}
+
+#lleo_dialog .ll-translation-marker {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAWSURBVBhXY7RPm/+fAQkwIXNAbMICAJQ8AkvqWg/SAAAAAElFTkSuQmCC) !important;
+    display: inline-block !important;
+    width: 4px !important;
+    height: 4px !important;
+    margin: 7px 5px 2px 2px !important;
+    float: left !important;
+}
+
+#lleo_dialog #lleo_icons {
+    color: #aaa !important;
+    font-size: 11px !important;
+    background: #f8f8f8 !important;
+    padding: 10px 10px 10px 16px !important;
+}
+#lleo_icons a {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 10px -4px 3px !important;
+    text-decoration: none !important;
+    opacity: 0.5 !important;
+    background: url(data:image/png;base64,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) !important;
+}
+#lleo_icons a:hover {
+    opacity: 1 !important;
+}
+#lleo_icons a.lleo_google     {background-position:-34px 0 !important;}
+#lleo_icons a.lleo_multitran  {background-position:-64px 0 !important;}
+#lleo_icons a.lleo_lingvo     {background-position:-51px 0 !important; width: 12px !important;}
+#lleo_icons a.lleo_dict       {background-position:-17px 0 !important;}
+#lleo_icons a.lleo_linguee    {background-position:-81px 0 !important;}
+#lleo_icons a.lleo_michaelis  {background-position:-98px 0 !important;}
+
+#lleo_dialog #lleo_contextContainer {
+    margin: 0 !important;
+    padding: 3px 15px 8px 10px !important;
+    background: #eee !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)) !important;
+    background: -moz-linear-gradient(-90deg, #fff, #eee) !important;
+    border-bottom: solid 1px #ddd !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    display: none !important;
+    overflow: hidden !important;
+}
+#lleo_dialog .lleo_has_context #lleo_contextContainer {
+    display: block !important;
+}
+#lleo_dialog #lleo_context {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    line-height: 12px !important;
+    font-size: 11px !important;
+    margin-left: 2px !important;
+}
+#lleo_dialog #lleo_context b {
+    line-height: 12px !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+}
+/*#lleo_dialog #lleo_gBrand {
+    color: #aaa !important;
+    font-size: 10px !important;
+    *//*padding-right: 52px !important;*//*
+    padding-bottom: 14px !important;
+    margin: -3px 4px 0 4px !important;
+    background: left bottom url(data:image/png;base64,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) no-repeat !important;
+    display: inline-block !important;
+    float: right !important;
+}
+#lleo_dialog #lleo_gBrand.hidden {
+    display: none !important;
+}*/
+#lleo_dialog #lleo_translateContextLink {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ddd)) !important;
+    background: -moz-linear-gradient(-90deg, #f4f4f4, #ddd) !important;
+    border: solid 1px !important;
+    box-shadow: 1px 1px 0 #f6f6f6 !important;
+    border-color: #999 #aaa #aaa #999 !important;
+    -moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+    padding: 0 3px !important;
+    font-size: 11px !important;
+    text-decoration: none !important;
+    margin: 1px 5px 0 !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+}
+#lleo_dialog #lleo_translateContextLink:hover {
+    background: #f8f8f8 !important;
+}
+#lleo_dialog #lleo_translateContextLink.hidden {
+    visibility: hidden !important;
+}
+
+#lleo_dialog #lleo_setTransForm {
+    display: block !important;
+    margin-top: 3px !important;
+    padding-top: 5px !important;
+    /* Set position and background because the form might be overlapped by an image when no translations */
+    position: relative !important;
+    background: #fff !important;
+    z-index: 10 !important;
+    padding-bottom: 10px !important;
+    padding-left: 16px !important;
+}
+#lleo_dialog .lleo-custom-translation {
+    padding: 4px 5px !important;
+    border: solid 1px #ddd !important;
+	border-radius: 2px !important;
+    width: 90% !important;
+    min-width: 270px !important;
+    background: -webkit-gradient(linear, 0 0, 0 20, from(#f1f1f1), to(#fff)) !important;
+    background: -moz-linear-gradient(-90deg, #f1f1f1, #fff) !important;
+	font: normal 13px Arial, Helvetica !important;
+	line-height: 15px !important;
+}
+#lleo_dialog .lleo-custom-translation:hover {
+    border: solid 1px #aaa !important;
+}
+#lleo_dialog .lleo-custom-translation:focus {
+    background: #FFFEC9 !important;
+}
+
+#lleo_dialog *.hidden {
+    display: none !important;
+}
+
+#lleo_dialog .infinitive{
+    color: #D56E00 !important;
+    text-decoration: none;
+    border-bottom: 1px dotted #D56E00 !important;
+}
+#lleo_dialog .infinitive:hover{
+    border: none !important;
+}
+
+#lleo_dialog .lleo_separator {
+    height: 1px !important;
+    background: #eee;
+    margin-top: 10px !important;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, #eee 8%, rgba(255,255,255,1) 80%) !important;
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+}
+#lleo_dialog #lleo_trans {
+    /*border-top: 1px solid #eeeeee !important;*/
+    padding: 5px 30px 0 14px !important;
+    zoom: 1;
+}
+
+#lleo_dialog .lleo_clearfix {
+	display: block !important;
+	clear: both !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	font-size: 0 !important;
+}
+
+
+#lleo_dialog #lleo_picOuter table {
+    width: 44px !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    vertical-align: middle !important;
+}
+
+#lleo_dialog #lleo_picOuter td {
+    width: 38px !important;
+    height: 38px !important;
+    /*border: 1px solid #eeeeee !important;*/
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+#lleo_dialog #lleo_picOuter td div {
+	height: 38px !important;
+	overflow: hidden !important;
+}
+
+#lleo_dialog .lleo_empty {
+    margin: 0 5px 7px !important;
+}
+
+#lleo_youtubeExportBtn {
+    margin-left: 10px;
+    height: 24px;
+}
+    #lleo_youtubeExportBtn i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: 0 0 url(https://d144fqpiyasmrr.cloudfront.net/plugins/all/images/i16.png) !important;
+    }
+    #lleo_youtubeExportBtn .yt-uix-button-content {
+        font-size: 12px;
+        line-height: 2px;
+    }
+
+
+/*** Parsed Lyrics Content *****************************/
+
+.lleo_lyrics tran {
+    background: transparent !important;
+    border-radius: 2px !important;
+    text-shadow: none !important;
+    cursor: pointer !important;
+}
+    .lleo_lyrics tran:hover {
+        color: #fff !important;
+        background: #C77213 !important;
+        -webkit-transition: all 0.1s !important;
+        -moz-transition: all 0.1s !important;
+        -ms-transition: all 0.1s !important;
+        -o-transition: all 0.1s !important;
+        transition: all 0.1s !important;
+    }
+
+.lleo_songName {
+    border: solid 1px #ffd47c;
+    background: #fff1c2;
+    border-radius: 2px;
+}
+
+.lleo_hidden_iframe {
+    visibility: hidden;
+}</style>
+</head>
+
+
+
+
+
+<body>  
+   
+
+    <div class="head">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="logo_top">
+                            <a href="/"><img src="/img/100AM_logo@svg.svg" alt="100am"></a>
+                        </div>
+                        <div class="navig_a_top">
+                            <a href="/">100AM</a>
+                            <!--a href="#">Live Cards</a-->
+                            <a href="/business">100AM Business</a>
+                            <a href="/community">Группы</a>
+                        </div>
+                        <div class="account_top">
+                            <a href="http://web.100am.co/sign-up" class="downloadLink" target="_blank">Зарегистрироваться</a>
+                            <a href="http://web.100am.co">Войти</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    <section id="firstscreen">
+        <div class="container">
+             <div class="row">
+                  <div class="col-xs-12 firstscreen">
+                     <h1>Как создать корпоративный аккаунт</h1>
+                 </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-12 firstscreen_col1">
+                    <img class="firstscreen_col1_bgmobile" src="img/В работе/решения.png" alt="Решения 100АМ"><br>
+                    <div class="firstscreen_col1_part1">
+                        <span>1.</span>
+                        <p>Зайдите на страницу</p>
+                        <a href="linkhttps://www.100am.co/business/">https://www.100am.co/business/ 
+                        <img class="firstscreen_col1_img_icon" src="img/В работе/link_icon.png" alt="Иконка ссылки"></a>
+                        <p>и нажмите</p>
+                        <button class="firstscreen_col1_btn1"><div class="firstscreen_col1_btn1_title">Создать аккаунт
+                        </div></button> 
+                        <div class="firstscreen_col1_text_ili">или</div> 
+                        <button class="firstscreen_col1_btn2"><div class="firstscreen_col1_btn2_title">Зарегистрироваться
+                        </div></button>
+                        <img class="firstscreen_col1_lines" src="img/В работе/col1_lines.png" alt="Линии">
+                        <img class="firstscreen_col1_lines_point" src="img/В работе/col1_lines_point.png" alt="Указатель">
+                    </div> <!-- column 1 part 1 -->
+                    <div class="firstscreen_col1_part2">
+                        <span class="firstscreen_col1_span_2">2.</span>
+                        <p class="firstscreen_col1_part2_header">Введите название компании</p>
+                        <p class="firstscreen_col1_part2_text">(Используется как название группы, название компании в карточках участников можно изменить)</p>
+                        <img class="firstscreen_col1_team" src="img/В работе/new_team.png" alt="Create new team"> 
+                    </div> <!-- column 1 part 2 -->
+                </div>
+                <div class="col-md-6 col-xs-12 firstscreen_col2">
+                    <div class="firstscreen_col2_part1">
+                          <img class="firstscreen_col2_part1_bg" src="img/В работе/решения.png" alt="Решения 100АМ">
+                          <span>3.</span>
+                          <p class="firstscreen_col2_part1_header">Введите почту, на которую будет зарегистрирован аккаунт</p>
+                          <p class="firstscreen_col2_part1_text">(На эту почту не должен быть зарегистрирован личный аккаунт)</p>
+                          <img class="firstscreen_col2_part1_team" src="img/В работе/col2_email.png" alt="Enter email">
+                    </div> <!-- column 2 part 1 -->
+                </div>
+            </div>
+        </div> 
+        <div class="container">
+            <div class="row part4-5">
+                <div class="col-xs-12 col-md-6 part4-5_part4">
+                      <span>4.</span>
+                      <p class="part4-5_part4_header">На эту почту вам будет отправлен код. Нужно ввести его вручную или перейти по ссылке из письма</p>
+                      <img class="part4-5_part4_code" src="img/В работе/code.png" alt="Enter the code">
+                </div>
+                <div class="col-xs-12 col-md-6 part4-5_part5">
+                      <p class="part4-5_part5_text">Пример письма, которое придет вам на почту:</p>
+                      <img class="part4-5_part5_activation" src="img/В работе/col4_activation.png" alt="Activation code">
+                </div>
+            </div>
+        </div>
+    </section> <!-- // FIRSTSCREEN -->
+    <section id="secondscreen">
+        <div class="container stage5-container">
+            <div class="row">
+                <div class="col-xs-12 stage5">
+                    <span>5.</span>
+                    <p class="stage5_header">Выберите шаблон визитки из 10 возможных шаблонов.</p>
+                    <p class="stage5_text">(Графическую часть можно будет изменить на следующем шаге)</p>
+                    <img class="stage5_blank-team" src="img/В работе/blank_team.png" alt="Blank Team">
+                </div>
+            </div>
+            <div class="row blank5">
+                <div class="col-md-6 col-xs-12">
+                    <img class="blank5_main-image" src="img/В работе/Blank5.png" alt="Blank Number 5">
+                </div>
+                <div class="col-md-6 col-xs-12 blank5_col2">
+                    <img class="blank5_col2_images" src="img/В работе/blank5-images.png" alt="Images">
+                    <p class="blank5_col2_text">На текущий момент можно вставить только фото, в течение месяца появится возможность добавить видео или gif</p>
+                </div>
+            </div>
+        </div>
+        <div class="container stage6">
+            <div class="row stage6-row">
+                <div class="col-md-6 col-xs-12">
+                    <span class="stage6_span_main">6.</span>
+                    <p class="stage6_header">Заполните данные вашей компании</p><br>
+                    <p class="stage6_text_1">Вы можете заполнить ровно те поля, которые вы считаете необходимыми (за исключением обязательных помеченных звездочкой полей) и нажмите кнопку <span class="stage6_span_save">Save</span><br><br>
+                    <img class="stage6_photo" src="img/В работе/stage6_photo.png" alt="Photo">
+                    Загрузите логотип компании. <br><br></p>
+                    <div class="stage6_text_mobile">Нажмите кнопку <span class="stage6_span_save">Save</span> после внесенных изменений. <br><br>
+                    На следующем экране вы можете поставить брендированную картинку, релевантную вашей компании. Для этого необходимо нажать на кнопку <span class="stage6_span_upload"><img class="stage6_image" src="img/В работе/stage6_image.png" alt="Image">Upload cover picture</span><br><br>
+                    </div>
+                    <p class="stage6_text_2">На этом же экране вы можете поставить брендированную картинку, релевантную вашей компании. Для этого необходимо нажать на кнопку <span class="stage6_span_change">Change cover</span><br><br>
+                    Также на этом экране вы можете сменить шаблон визитки, нажав на   <span class="stage6_span_edit">Edit design</span><br><br>
+                    Не забудьте нажать и нажмите кнопку   <span class="stage6_span_save">Save</span>   после внесенных изменений.</p>   
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <img class="stage6_company" src="img/В работе/stage6_companyname.png" alt="Company Name">
+                </div>
+            </div>
+        </div>
+        <div class="container stage7">
+            <div class="row stage7_row">
+                <div class="col-md-6 col-xs-12 stage7_col1">
+                    <span class="stage7_span_main">7.</span>
+                    <p class="stage7_header">Далее вы можете пригласить сотрудников</p><br>
+                    <p class="stage7_text">Достаточно ввести почту сотрудника и нажать на кнопку   <span class="stage7_span_send">Send invites</span> (Отправить приглашение). <br><br>
+                    Отправлять приглашения можно порциями до 5 приглашений. Для приглашения последующих 5 сотрудников нужно нажать на кнопку <span class="stage7_span_add_pc">+ Add members</span><span class="stage7_span_add_mobile">+ Add members</span> (Добавить участников). <br><br>
+                    При желании вы можете заполнить профиль сотрудника (нажмите Fill card). Особенно это необходимо, если вы не хотите, чтобы сотрудник мог изменить должность, вписать личный имейл или личный фейсбук. <br><br>
+                    И не забудьте нажать кнопку   <span class="stage7_span_save">Save</span> :) </p>
+                </div>
+                <div class="col-md-6 col-xs-12 stage7_col2">
+                    <img class="stage7_col2_img" src="img/В работе/stage7-send.png" alt="Send Invites">
+                </div>
+            </div>
+        </div>
+        <div class="container mobile_addit-inform">
+            <div class="row mobile_addit-inform_row">
+                <div class="col-xs-12"> 
+                    <p class="mobile_addit-inform_text_1">Сотрудники получат на почту письмо, им нужно будет скачать приложение, зарегистрироваться, нажать на кнопку <span class="mobile_addit-inform_span_join">Join the team</span>, ввести недостающие данные и корпоративная визитка у них будет доступна в разделе <span class="mobile_addit-inform_span_cards">My cards</span> в приложении. </p>
+                    <img class="mobile_addit-inform_img_1" src="img/В работе/pending.png" alt="Pending Invitation">
+                    <p class="mobile_addit-inform_text_2">
+                        Вы можете повторно отправить инвайт, <br> если ввели неправильную почту <br> сотрудника, отредактировать данные <br> сотрудника или удалить <br> его, если он больше не работает <br> в компании
+                    </p>
+                    <img class="mobile_addit-inform_img_2" src="img/В работе/settings-edit.png" alt="Settings Edit">
+                    <p class="mobile_addit-inform_text_3">
+                        Вы можете редактировать карточку компании <span class="mobile_addit-inform_span_gray">(Edit company)</span> или менять настройки полей для карточек сотрудников <span class="mobile_addit-inform_span_gray">(Edit team settings)</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container settings">
+            <div class="row settings_row">
+                <div class="col-xs-12 settings_title_pc"><p>Важный момент: для каждого поля сотрудника вы можете задать настройки:</p></div>
+                <div class="settings_title_mobile">
+                    <p>Настройки полей <br> для карточек сотрудников:</p>
+                </div>
+                <div class="col-xs-6 col-md-3 settings_blocks_1">
+                    <img class="settings_blocks_1_img" src="img/В работе/blocks-eye.png" alt="Eye">
+                    <p class="settings_blocks_1_title">
+                        Optional
+                    </p>
+                    <p class="settings_blocks_1_text">
+                        Опционально для заполнения сотрудником
+                    </p>
+                </div>
+                <div class="col-xs-6 col-md-3 settings_blocks_2">
+                    <img class="settings_blocks_2_img" src="img/В работе/blocks-star.png" alt="Star">
+                    <p class="settings_blocks_2_title">
+                        Required
+                    </p>
+                    <p class="settings_blocks_2_text">
+                        Обязательное поле для заполнения сотрудником. <br><br>
+                        Если сотрудник не введет данные этого поля, то его визитка не сохранится.
+                    </p>
+                </div>
+                <div class="col-xs-6 col-md-3 settings_blocks_3">
+                    <img class="settings_blocks_3_img" src="img/В работе/blocks-locked.png" alt="Locked">
+                    <p class="settings_blocks_3_title">
+                        Locked
+                    </p>
+                    <p class="settings_blocks_3_text">
+                        Сотрудник не сможет его отредактировать
+                    </p>
+                </div>
+                <div class="col-xs-6 col-md-3 settings_blocks_4">
+                    <img class="settings_blocks_4_img" src="img/В работе/blocks-hidden.png" alt="Hidden">
+                    <p class="settings_blocks_4_title">
+                        Disabled
+                    </p>
+                    <p class="settings_blocks_4_text">
+                        При заполнении своей визитки у сотрудника это поле не будет показано
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container pc_addit-inform">
+            <div class="row pc_addit-inform_row_1">
+                <div class="col-md-6"> 
+                    <img class="pc_addit-inform_img_1" src="img/В работе/pending2.png" alt="Pending Invitation">
+                </div>
+                <div class="col-md-6">
+                    <p class="pc_addit-inform_text_1">
+                        Вы можете повторно отправить инвайт, если ввели неправильную почту сотрудника, отредактировать данные сотрудника или удалить его, если он больше не работает в компании
+                    </p>
+                </div>
+            </div>
+            <div class="row pc_addit-inform_row_2">
+                <div class="col-md-6">
+                    <img class="pc_addit-inform_img_2" src="img/В работе/settings-edit2.png" alt="Settings Edit">
+                </div>
+                <div class="col-md-6">
+                    <p class="pc_addit-inform_text_2">
+                        Вы можете редактировать карточку компании <span class="pc_addit-inform_span_gray">(Edit company)</span> или менять настройки полей для карточек сотрудников <span class="pc_addit-inform_span_gray">(Edit team settings)</span>
+                    </p>
+                </div>
+            </div>                  
+        </div>
+        <div class="container question">
+            <div class="row question_row">
+                <div class="col-xs-12">
+                    <p class="question_header">
+                        ?
+                    </p>
+                    <p class="question_text">
+                        И если у вас будут вопросы или комментарии, вы всегда можете их отправить на почту
+                    </p>
+                    <p class="question_link">
+                        support@100am.co
+                    </p>
+                    <div class="question_line">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <script type="text/javascript">// viewport stuff
+            var targetWidth = 1100;
+            var deviceWidth = 'device-width';
+            var viewport = $('meta[name="viewport"]');
+            
+            // check to see if local storage value is set on page load
+            localStorage.isResponsive = (localStorage.isResponsive == undefined) ? 'true' : localStorage.isResponsive;
+            
+            var showFullSite = function(){    
+                viewport.attr('content', 'width=' + targetWidth);  
+                
+                if(!$('#view-options #view-responsive').length){
+                    $('#view-options').append('View Mobile Optimized');
+                }    
+                
+                localStorage.isResponsive = 'false';
+            }
+            
+            var showMobileOptimized = function(){
+                localStorage.isResponsive = 'true';
+                viewport.attr('content', 'width=' + deviceWidth);
+            }
+            
+            // if the user previously chose to view full site, change the viewport
+            if(Modernizr.localstorage){
+                if(localStorage.isResponsive == 'false'){
+                    showFullSite();
+                }
+            }    
+            
+            $("#view-full").on("click", function(){
+                showFullSite();
+            });
+            
+            $('#view-options').on("click", "#view-responsive", function(){
+                showMobileOptimized();
+            });</script> -->
+
+    </section>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="footer_content">
+                        <div class="footer_content_block1">
+                            <span>100AM</span>
+                            <div class="footer_a_br"><a href="/">Функции</a></div>
+                            <!--div class="footer_a_br"><a href="#">Тарифы</a></div-->
+                            <div class="footer_a_br"><a href="/business">100AM Business</a></div>
+                            <div class="footer_a_br"><a href="/community">Группы</a></div>
+                            <div class="footer_a_br"><a href="/for_designers">Для дизайнеров</a></div>
+                            <div class="footer_content_block1_line">
+                            </div>
+                            <div id="view-options">
+                                <span id="view-responsive">Мобильная версия сайта</span>
+                                <span id="view-full">Полная версия сайта</span>
+                            </div></div>
+                        </div>
+                        <div class="footer_content_block1">
+                            <span>Компания</span>
+                            <div class="footer_a_br"><a href="/about">О нас</a></div>
+                            <div class="footer_a_br"><a href="https://hh.ru/employer/2354351" target="_blank">Вакансии</a></div>
+                            <!--div class="footer_a_br"><a href="#">Медиа</a></div>
+                            <div class="footer_a_br"><a href="#">Новости</a></div-->
+                        </div>
+                        <div class="footer_content_block1">
+                            <span>Поддержка</span>
+                            <!--div class="footer_a_br"><a href="#">Часто задаваемые вопросы</a></div-->
+                            <div class="footer_a_br"><a href="mailto:support@100am.co">Напишите нам</a></div>
+                            <div class="footer_a_br"><a href="/privacy">Конфиденциальность</a></div>
+                            <div class="footer_a_br"><a href="/terms">Условия использования</a></div>
+                        </div>
+                        <div class="footer_content_block1 footer_content_block1_last ">
+                            <a href="https://play.google.com/store/apps/details?id=com.the100am.app" target="_blank"><img src="img/В работе/android(1).svg" alt="android"></a>
+                            <a href="https://itunes.apple.com/ru/app/100am/id1202162533?l=en&mt=8" target="_blank"><img src="img/В работе/apple.svg" alt="apple"></a>
+                            
+                        </div>
+                        <div class="footer_hr"></div>
+                        <div class="footer_content_block2">
+                            <span>©2017 100andMore Corporation</span>
+                        </div>
+                        <div class="footer_content_block2 footer_social">
+                            <a href="https://www.facebook.com/100andmorecorp/" target="_blank"><img src="img/В работе/Facebook.svg" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/100andmore/" target="_blank"><img src="img/В работе/Instagram.svg" alt="Instagram"></a>
+                        </div>
+                        <div class="footer_content_block2 language">
+                            <a href="?lang=en"><img src="img/В работе/US.svg" alt="US">English</a>
+                            <a href="?lang=ru"><img src="img/В работе/RU.svg" alt="RU">Русский</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js.Без названия"></script>
+    <script src="js/demo.js.Без названия"></script>
+  </body>
+</html>
