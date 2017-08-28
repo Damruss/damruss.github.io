@@ -1,0 +1,92 @@
+body {
+	font-family: 'OpenSansRegular', sans-serif;
+	background-color: #f8f8f8;
+}
+
+.main {
+	margin: 5% 0 52px 5%;
+}
+
+.main p {
+	font-family: 'OpenSansBold', sans-serif;
+	background-color: #f8f8f8;
+	font-size: 28px;
+	margin: 0 0 1% 0;
+}
+
+.menu {
+	margin-bottom: 27px;
+}
+
+.menu ul {
+	display: none;
+	height: 159px;
+	width: 172px;
+	background-color: #f8f8f8;
+	position: absolute;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #a9a9a9;
+	top: 133px;
+}
+
+.menu.open ul {
+  display: block;
+}
+
+.menu.open li {
+  margin-top: 16px;
+  list-style-type: none;
+  position: relative;
+  left: -31px;
+  cursor: pointer;
+}
+
+.triangle {
+	position: absolute;
+	font-size: 11px;
+	margin: 12px 0 0 192px;
+}
+
+#btn_show-menu {
+	display: block;
+	width: 214px;
+	height: 34px;
+	background-color: white;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #a9a9a9;
+	cursor: pointer;
+}
+
+.btn_save {
+	width: 53px;
+	height: 37px;
+	background-color: white;
+	border-style: solid;
+	border-width: 1px;
+	position: relative;
+	right: 6px;
+	cursor: pointer;
+}
+
+#input-changes {
+	display: inline-block;
+}
+
+#inp_ChangeName {
+	display: inline-block;
+	width: 462px;
+	height: 33px;
+	padding-left: 1%;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.invalid {
+	border-color: #f82e2e;
+}
+
+.valid {
+	border-color: #a9a9a9
+}
